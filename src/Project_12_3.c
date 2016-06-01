@@ -23,7 +23,7 @@ void fill_layer_update(Layer *me, GContext *ctx) {
   // Get the size of our layer (which should fill the whole screen)
   GRect frame = layer_get_frame(me);
 
-  // Put Your fill_color code here
+  // The fill_color code
   fill_color = (GColor8){ .a = 3, .r = red, .g = green, .b = blue };
   
   // Fill the layer with our fill_color
@@ -37,7 +37,7 @@ void fill_layer_update(Layer *me, GContext *ctx) {
 // ------------------------------------------------------------------------ //
 void up_single_click_handler(ClickRecognizerRef recognizer, void *context) {
 
-  // Put Your Red Manipulation Code Here
+  // The Red Manipulation Code
   red = (red + 1) & 3;
   
   layer_mark_dirty(fill_layer);
@@ -46,7 +46,7 @@ void up_single_click_handler(ClickRecognizerRef recognizer, void *context) {
 
 void select_single_click_handler(ClickRecognizerRef recognizer, void *context) {
 
-  // Put Your Green Manipulation Code Here
+  // The Green Manipulation Code
   green = (green + 1) & 3;
 
   layer_mark_dirty(fill_layer);
@@ -55,7 +55,7 @@ void select_single_click_handler(ClickRecognizerRef recognizer, void *context) {
 
 void down_single_click_handler(ClickRecognizerRef recognizer, void *context) {
 
-  // Put Your Blue Manipulation Code Here
+  // The Blue Manipulation Code
   blue = (blue + 1) & 3;
   
   layer_mark_dirty(fill_layer);
